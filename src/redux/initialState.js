@@ -12,7 +12,7 @@ const initialState = {
       },
       {
         id: 3,
-        title: 'Games',
+        title: 'Gamesyoo',
         icon: 'gamepad',
       }
     ],
