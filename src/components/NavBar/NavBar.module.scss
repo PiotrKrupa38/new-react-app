@@ -25,9 +25,6 @@
     flex-direction: row;
     align-items: center;
     width: 45%;
-    a {
-
-    }
     span {
       padding-right: $base-size;
       color: $color-warning;
@@ -52,6 +49,9 @@
     li {
       display: inline-block;
       padding: 0 10px;
+      .linkActive {
+        color: $color-warning;
+      }
       a {
         color: $color-light;
         text-decoration: none;
