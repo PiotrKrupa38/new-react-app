@@ -1,9 +1,9 @@
-import { getCardById } from '../../redux/store';
+import { getCardById } from '../../redux/cardsReducer';
 import styles from './Card.module.scss';
 import clsx from 'clsx';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { toggleClass } from '../../redux/store';
+import { toggleClass } from '../../redux/cardsReducer';
 
 const Card = (props) => {
     const card = useSelector(state => getCardById(state, props.id))
