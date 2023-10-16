@@ -5,13 +5,14 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { toggleClass } from '../../redux/store';
 
-const Card = props => {
+const Card = (props) => {
     const card = useSelector(state => getCardById(state, props.id))
     const dispatch = useDispatch(); 
 
     const toggle = () => {
         dispatch(toggleClass(props.id))
     }
+    
 
     
     return (
