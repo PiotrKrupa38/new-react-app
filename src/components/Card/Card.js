@@ -3,7 +3,7 @@ import styles from './Card.module.scss';
 import clsx from 'clsx';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { toggleClass } from '../../redux/cardsReducer';
+import { toggleClass, removeCard } from '../../redux/cardsReducer';
 
 const Card = (props) => {
     const card = useSelector(state => getCardById(state, props.id))
@@ -13,6 +13,9 @@ const Card = (props) => {
         dispatch(toggleClass(props.id))
     }
     
+    const remove = () => {
+        dispatch(removeCard(props.id))
+    }
 
     
     return (
@@ -22,6 +25,7 @@ const Card = (props) => {
                 <button onClick={toggle} className={styles.star}>
                 <i className={clsx(card.isFavorite && styles.favorite, 'fa fa-star')}></i>
                 </button>
+                <button className={styles.star} onClick={remove}><i className={"fa fa-trash"}></i></button>
             </div>
         </li>
     );
